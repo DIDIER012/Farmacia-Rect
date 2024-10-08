@@ -1,11 +1,17 @@
+import { Link } from "react-router-dom";
+import CartWidget from "../../common/CartWidget/CartWidget";
+
+
 // eslint-disable-next-line react/prop-types
 const Navbar = ({ menuOpen, toggleMenu }) => {  
     return (  
-        <div className="w-full h-full absolute bg-gradient-to-r from-blue-400 to-emerald-400">  
-            <header className="flex justify-between items-center text-black px-6 py-8 md:px-32 bg-white drop-shadow-md">  
+        <div className="w-full h-full relative ">  
+            <header className="flex justify-between items-center text-black px-6 py-8 md:px-32 drop-shadow-md bg-orange-400"> 
+                <Link to= "/">
                 <h1 className="text-lg sm:text-2xl md:text-3xl"> 
                     Cura <span className="text-amber-300 font-semibold">Fácil</span>  
                 </h1>  
+                </Link>
 
                 <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">  
                     <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">CONTACTO</li>  
@@ -23,6 +29,13 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
                     <li className="list-none w-full text-center p-4 hover:bg-sky-400 cursor-pointer">PRODUCTOS</li>  
                     <li className="list-none w-full text-center p-4 hover:bg-sky-400 cursor-pointer">SERVICIOS</li>  
                 </div>  
+
+
+                <div>
+                <Link to="/cart">
+                <CartWidget />
+                </Link>
+                </div>
             </header>  
         </div>  
     );  
