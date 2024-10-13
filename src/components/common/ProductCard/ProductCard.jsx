@@ -26,7 +26,7 @@ const ProductCard = ({ title, price, imageUrl, description, id }) => {
         </Typography>
         </CardContent>
         <CardActions>
-        <Link to={`/productDetail/${id}`}>
+        <Link to={`/Detalle/${id}`}>
             <Button variant="outlined" size="small">
             Ver detalle
             </Button>

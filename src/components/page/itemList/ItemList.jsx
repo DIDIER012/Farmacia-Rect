@@ -1,5 +1,5 @@
 
-import ProductCard from "../../common/ProductCard";  
+import ProductCard from "../../common/ProductCard/ProductCard";  
 
 const ItemList = ({ items }) => {  
     if (!items) {  
