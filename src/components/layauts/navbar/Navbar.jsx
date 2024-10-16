@@ -34,9 +34,7 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
 
 
                 <div>
-                <Link to="/cart">
                 <CartWidget />
-                </Link>
                 </div>
             </header>  
         </div>  
