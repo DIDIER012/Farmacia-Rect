@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import CartWidget from "../../common/CartWidget/CartWidget";
+import { categories } from "./categories";
 
 
-// eslint-disable-next-line react/prop-types
 const Navbar = ({ menuOpen, toggleMenu }) => {  
     return (  
         <div className="w-full h-full relative ">  
@@ -12,11 +12,13 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
                     Cura <span className="text-amber-300 font-semibold">Fácil</span>  
                 </h1>  
                 </Link>
-
+                
                 <ul className="hidden xl:flex items-center gap-12 font-semibold text-base">  
-                    <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">CONTACTO</li>  
-                    <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">PRODUCTOS</li>  
-                    <li className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">SERVICIOS</li>  
+                {categories.map(({ title, path }) => (
+                    <Link key={title} to={path} className="p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer">
+                    {title}
+                    </Link>
+                    ))}
                 </ul>  
 
                 <div className="relative hidden md:flex items-center justify-center gap-3">  

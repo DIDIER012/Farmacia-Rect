@@ -7,15 +7,22 @@ import ItemDetailContainer from "./components/page/ItemDetail/ItemDetailContaine
 
 
 
-
 function App() {
   return (
     <BrowserRouter>
     <Navbar/>
     <Routes>
+      <Route path={"/"} element= {<CartsContainer/>}/>
+      <Route
+          path={"/category/:categoryName"}
+          element={<CartsContainer />}
+        />
+
+
+
       <Route path={"/"}  element= {<CartsContainer/>}/>
       <Route path= "*" element= {<Error/>}/>
-      <Route path= {"/Cart"} element= {Cart}/>
+      <Route path= {"/Cart"} element= {<Cart/>}/>
       <Route path={"/Detalle/:id"} element={<ItemDetailContainer />} />
     </Routes>
     </BrowserRouter>
