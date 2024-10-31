@@ -5,9 +5,9 @@ import Cart from "./Cart";
 
 
 const CartContainer = () => {
-    const {shop, deleteProductById, clearCart, totalBuy} = useContext(ShopContext);
+    const {shop, deleteProductById, clearCart, getTotalAmount} = useContext(ShopContext);
 
-    let total = totalBuy()
+    let total = getTotalAmount()
 
 
     return (

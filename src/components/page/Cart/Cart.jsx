@@ -18,13 +18,13 @@ const Cart = ({ shop, clearCart, deleteProductById, total }) => {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "se limpio el carrito",
+          title: "!los productps fueron eliminados!",
         });
       } else if (result.isDenied) {
         Swal.fire({
           position: "center",
           icon: "info",
-          title: "el carrito queda como estaba",
+          title: "!Puedes seguir con tu compra!",
         });
       }
     });
@@ -33,16 +33,16 @@ const Cart = ({ shop, clearCart, deleteProductById, total }) => {
 
 
   return (
-    <div className='p-52'>
+    <div className='flex flex-col justify-center items-center p-52'>
       {shop.length === 0 ? (
         <h2 className='flex justify-center items-center font text-5xl font-bold'>No hay productos en el carrito todavía!</h2>
       ) : (
         shop.map((products) => (
-          <div key={products.id}>
+          <div key={products.id} className='flex flex-col justify-center items-center gap-4 text-2xl font-bold'>
             <img src={products.imageUrl} alt={products.title} />
             <h2>{products.title}</h2>
-            <h3>{products.price}</h3>
-            <h3>{products.quantity}</h3>
+            <h3>${products.price}</h3>
+            <h3>Cantidad: {products.quantity}</h3>
             <h3>Total a pagar: {products.price * products.quantity}</h3>
             <Button
               variant="contained"
@@ -56,9 +56,9 @@ const Cart = ({ shop, clearCart, deleteProductById, total }) => {
       )}
 
 {total > 0 && (
-        <>
+        <div>
           <Button
-            sx={{ marginTop: 20 }}
+            sx={{ marginTop: 20,  marginRight: 2 }}
             variant="contained"
             onClick={limpiarConAlert}
           >
@@ -69,7 +69,7 @@ const Cart = ({ shop, clearCart, deleteProductById, total }) => {
               Finalizar compra
             </Button>
           </Link>
-        </>
+          </div>
       )}
 
       {total > 0 && <h2>El total a pagar es : $ {total}</h2>}
