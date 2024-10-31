@@ -2,8 +2,8 @@ import { useState } from "react";
 import Swal from "sweetalert2"; 
 import Counter from "./Counter";  
 
-const CounterContainer = ({ onAdd, stock }) => {  
-    const [contador, setContador] = useState(1);  
+const CounterContainer = ({ add, stock, totalItems }) => {  
+    const [contador, setContador] = useState(totalItems);  
 
     const suma = () => {  
         if (contador < stock) {  
@@ -33,7 +33,7 @@ const CounterContainer = ({ onAdd, stock }) => {
         contador,  
         suma,  
         resta,  
-        onAdd,  
+        add,  
     };  
 
     return <Counter {...ChildProps} />;  

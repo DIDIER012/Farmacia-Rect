@@ -33,9 +33,10 @@ const Navbar = ({ menuOpen, toggleMenu }) => {
                 </div>  
 
 
-                <div>
+                <Link to={"/Carrito"}>
                 <CartWidget />
-                </div>
+                </Link>
+                
             </header>  
         </div>  
     );  

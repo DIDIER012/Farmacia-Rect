@@ -1,8 +1,9 @@
-# React + Vite
+# Página de Medicamentos  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Descripción:**  
+Esta aplicación web está diseñada para facilitar la búsqueda y gestión de medicamentos. Proporciona a los usuarios una interfaz amigable y atractiva, donde pueden explorar diferentes medicamentos, leer descripciones, verificar precios y disponibilidad, así como gestionar sus recetas.  
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Librerías Usadas:**  
+- **Tailwind CSS**: Se utiliza para el diseño y la estilización de componentes, ofreciendo un enfoque de utilidades que permite crear interfaces responsivas y personalizadas de manera rápida y eficiente.  
+- **SweetAlert2**: Esta librería se emplea para mostrar mensajes interactivos y atractivos, mejorando la experiencia del usuario con notificaciones y alertas estilizadas.  
+- **Material-UI**: Se utiliza para implementar componentes React con un diseño moderno y consistente, facilitando la creación de una interfaz usuario que siga los principios de diseño de Material Design.

@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";  
 
-const Counter = ({ suma, resta, contador, onAdd }) => {  
+const Counter = ({ suma, resta, contador, add }) => {  
     return (  
         <div className="flex flex-col items-center gap-5">  
             <div className="flex gap-5 items-center">  
@@ -15,7 +15,7 @@ const Counter = ({ suma, resta, contador, onAdd }) => {
                 </Button>  
             </div>  
 
-            <Button variant="outlined" onClick={() => onAdd(contador)}>  
+            <Button variant="outlined" onClick={() => add(contador)}>  
                 AGREGAR PRODUCTO  
             </Button>  
         </div>  

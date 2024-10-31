@@ -1,17 +1,17 @@
 import CounterContainer from "../../common/CounterProducts/CounterContainer";  
 
-const ItemDetail = ({ item, onAdd }) => {  
+const ItemDetail = ({ items, add, totalItems}) => {  
   return (  
     <div className="flex flex-col items-center justify-center gap-5 text-center">  
-      <img src={item.imageUrl} alt={item.title} className="mb-4" />  
+      <img src={items.imageUrl} alt={items.title} className="mb-3 w-72" />  
 
-      <h1 className="text-4xl">{item.title}</h1>  
+      <h1 className="text-4xl">{items.title}</h1>  
 
-      <p>{item.description}</p>  
+      <p>{items.description}</p>  
 
-      <span>{item.price}</span>  
+      <span>{items.price}</span>  
       
-      <CounterContainer onAdd={onAdd} stock={item.stock} />  
+      <CounterContainer add={add} stock={items.stock} totalItems={totalItems} />  
     </div>  
   );  
 };  
